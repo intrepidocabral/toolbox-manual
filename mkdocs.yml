@@ -3,7 +3,8 @@ pages:
 - Home: index.md
 - Bower: bower/readme.md
 - Docker: docker/readme.md
-- Git: git/readme.md
+- Git:
+  - 'Git - Push com chave ssh': 'git/git_push_com_chave_ssh.md'
 - Grunt: grunt/readme.md
 - Gulp: gulp/readme.md
 - Laravel: 
