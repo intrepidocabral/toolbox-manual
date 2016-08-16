@@ -1,0 +1,25 @@
+site_name: Toobox Manual
+pages: 
+- Home: index.md
+- bower: bower/readme.md
+- docker: docker/readme.md
+- git: git/readme.md
+- grunt: grunt/readme.md
+- gulp: gulp/readme.md
+- laravel: laravel/readme.md
+- mysql: mysql/readme.md
+- Postgres: 
+  - 'Postgres - Commands': 'postgres/postgres_commands.md'
+  - 'Postgres - autodocs': 'postgres/postgres_autodocs.md'  
+- rails: rails/readme.md
+- shell-script: shell-script/readme.md
+- slim: slim/readme.md
+- ssh: 
+  - 'SSH - Commands': 'ssh/ssh_commands.md'
+- sublime: sublime/readme.md
+- supervisor: supervisor/readme.md
+- TAR: 
+  - 'Tar - Commands': 'tar/tar_commands.md'
+- vagrant: vagrant/readme.md
+- wordpress: wordpress/readme.md
+theme: readthedocs
