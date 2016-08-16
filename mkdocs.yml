@@ -6,7 +6,8 @@ pages:
 - Git: git/readme.md
 - Grunt: grunt/readme.md
 - Gulp: gulp/readme.md
-- Laravel: laravel/readme.md
+- Laravel: 
+  - 'Laravel - Commands': 'laravel/laravel_commands.md'
 - Mysql:
   - 'Mysql - Commands': 'mysql/mysql_commands.md'
 - Postgres: 
