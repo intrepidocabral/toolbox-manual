@@ -21,9 +21,14 @@
             "title": "Docker"
         }, 
         {
-            "location": "/git/readme/", 
-            "text": "", 
-            "title": "Git"
+            "location": "/git/git_push_com_chave_ssh/", 
+            "text": "Usando GIT com chave no github\n\n\n0 - Verifique se voc\u00ea j\u00e1 tem uma chave criada. Se tiver, voc\u00ea tem de saber a senha dela. Se n\u00e3o tiver, crie uma. Se tiver e n\u00e3o souber a senha, pode criar uma nova tamb\u00e9m. O comando abaixo mostra se h\u00e1 alguma chave criada (arquivo .pub \u00e9 a chave p\u00fablica)\n\n\n[18:34 system@system .ssh] \n ls -la ~./.ssh\ntotal 24K\ndrwx------  2 system system 4,0K Ago 16 18:34 .\ndrwxr-xr-x 55 system system 4,0K Ago 16 14:45 ..\n-rw-------  1 system system 1,8K Ago 16 18:34 id_rsa_robertkapa_desktop\n-rw-r--r--  1 system system  395 Ago 16 18:34 id_rsa_robertkapa_desktop.pub\n-rw-r--r--  1 system system 6,1K Ago 16 18:27 known_hosts\n\n\n\n\n1 - Crie um par de chaves, caso n\u00e3o tenha ou caso tenha perdido a senha\n\n\n$ ssh-keygen -t rsa\n\n\n\n\nEstas chaves v\u00e3o ficar no seu diret\u00f3rio /home/usuario/.ssh.\n\n\n2 - Copie a chave p\u00fablica para o github\n\n\nDe o comando cat no arquivo da chave p\u00fablica e voc\u00ea ir\u00e1 ver um resultado como esse. \n\n\n[18:39 system@system .ssh] \n cat id_rsa_robertkapa_desktop.pub \nssh-rsa ALAHAUFHIFUAHIFAJFDLKDJF\u00c7FJLKJKGLSFDGJ938743985714895NALAHAUFHIFUAHIFAJFDLKDJF\u00c7FJLKJKGLSFDGJ938743985714895NALAHAUFHIFUAHIFAJFDLKDJF\u00c7FJLKJKGLSFDGJ938743985714895N system@system\n\n\n\n\nLogado no github, no painel, procure o settings de seu profile. V\u00e1 na op\u00e7\u00e3o ssh e coloque uma \"new ssh key\": https://github.com/settings/ssh\n\n\n3 - Na pasta do projeto, execute a seguinte linha:\n\n\ngit remote set-url origin git@github.com:\nUsername\n/\nProject\n.git\n\n\n\n\n4 - Pronto! Tente dar um push no reposit\u00f3rio e voc\u00ea ver\u00e1 que o github pede a senha da chave e n\u00e3o pede mais seu usu\u00e1rio. Isso da primeira vez, depois quando voc\u00ea der git push ele n\u00e3o pede nem a senha da chave.", 
+            "title": "Git - Push com chave ssh"
+        }, 
+        {
+            "location": "/git/git_push_com_chave_ssh/#usando-git-com-chave-no-github", 
+            "text": "0 - Verifique se voc\u00ea j\u00e1 tem uma chave criada. Se tiver, voc\u00ea tem de saber a senha dela. Se n\u00e3o tiver, crie uma. Se tiver e n\u00e3o souber a senha, pode criar uma nova tamb\u00e9m. O comando abaixo mostra se h\u00e1 alguma chave criada (arquivo .pub \u00e9 a chave p\u00fablica)  [18:34 system@system .ssh]   ls -la ~./.ssh\ntotal 24K\ndrwx------  2 system system 4,0K Ago 16 18:34 .\ndrwxr-xr-x 55 system system 4,0K Ago 16 14:45 ..\n-rw-------  1 system system 1,8K Ago 16 18:34 id_rsa_robertkapa_desktop\n-rw-r--r--  1 system system  395 Ago 16 18:34 id_rsa_robertkapa_desktop.pub\n-rw-r--r--  1 system system 6,1K Ago 16 18:27 known_hosts  1 - Crie um par de chaves, caso n\u00e3o tenha ou caso tenha perdido a senha  $ ssh-keygen -t rsa  Estas chaves v\u00e3o ficar no seu diret\u00f3rio /home/usuario/.ssh.  2 - Copie a chave p\u00fablica para o github  De o comando cat no arquivo da chave p\u00fablica e voc\u00ea ir\u00e1 ver um resultado como esse.   [18:39 system@system .ssh]   cat id_rsa_robertkapa_desktop.pub \nssh-rsa ALAHAUFHIFUAHIFAJFDLKDJF\u00c7FJLKJKGLSFDGJ938743985714895NALAHAUFHIFUAHIFAJFDLKDJF\u00c7FJLKJKGLSFDGJ938743985714895NALAHAUFHIFUAHIFAJFDLKDJF\u00c7FJLKJKGLSFDGJ938743985714895N system@system  Logado no github, no painel, procure o settings de seu profile. V\u00e1 na op\u00e7\u00e3o ssh e coloque uma \"new ssh key\": https://github.com/settings/ssh  3 - Na pasta do projeto, execute a seguinte linha:  git remote set-url origin git@github.com: Username / Project .git  4 - Pronto! Tente dar um push no reposit\u00f3rio e voc\u00ea ver\u00e1 que o github pede a senha da chave e n\u00e3o pede mais seu usu\u00e1rio. Isso da primeira vez, depois quando voc\u00ea der git push ele n\u00e3o pede nem a senha da chave.", 
+            "title": "Usando GIT com chave no github"
         }, 
         {
             "location": "/grunt/readme/", 
@@ -36,9 +41,29 @@
             "title": "Gulp"
         }, 
         {
-            "location": "/laravel/readme/", 
+            "location": "/laravel/laravel_commands/", 
+            "text": "Artisan commands\n\n\nIniciar servidor local\n\n\nphp artisan serve\n\n\n\n\nTrocar o nome da aplica\u00e7\u00e3o\n\n\nphp artisan app:name \nnome da aplicacao\n\n\n\n\n\nChecar vers\u00e3o do Laravel de um determinado projeto\n\n\nphp artisan --version", 
+            "title": "Laravel - Commands"
+        }, 
+        {
+            "location": "/laravel/laravel_commands/#artisan-commands", 
             "text": "", 
-            "title": "Laravel"
+            "title": "Artisan commands"
+        }, 
+        {
+            "location": "/laravel/laravel_commands/#iniciar-servidor-local", 
+            "text": "php artisan serve", 
+            "title": "Iniciar servidor local"
+        }, 
+        {
+            "location": "/laravel/laravel_commands/#trocar-o-nome-da-aplicacao", 
+            "text": "php artisan app:name  nome da aplicacao", 
+            "title": "Trocar o nome da aplica\u00e7\u00e3o"
+        }, 
+        {
+            "location": "/laravel/laravel_commands/#checar-versao-do-laravel-de-um-determinado-projeto", 
+            "text": "php artisan --version", 
+            "title": "Checar vers\u00e3o do Laravel de um determinado projeto"
         }, 
         {
             "location": "/mysql/mysql_commands/", 
