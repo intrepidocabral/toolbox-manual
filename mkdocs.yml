@@ -28,4 +28,4 @@ pages:
 - Vagrant: 
   - 'Vagrant - Commands': 'vagrant/vagrant_commands.md'
 - Wordpress: wordpress/readme.md
-theme: readthedocs
+theme: 'material'
