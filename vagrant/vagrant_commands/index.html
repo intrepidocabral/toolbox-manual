@@ -8,7 +8,7 @@
   
   
   
-  <title>Grunt - Toobox Manual</title>
+  <title>Vagrant - Commands - Toobox Manual</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Grunt";
-    var mkdocs_page_input_path = "grunt/readme.md";
-    var mkdocs_page_url = "/grunt/readme/";
+    var mkdocs_page_name = "Vagrant - Commands";
+    var mkdocs_page_input_path = "vagrant/vagrant_commands.md";
+    var mkdocs_page_url = "/vagrant/vagrant_commands/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -83,12 +83,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Grunt</a>
-        
-            <ul>
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../../grunt/readme/">Grunt</a>
         
     </li>
 <li>
@@ -231,8 +227,12 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../../vagrant/vagrant_commands/">Vagrant - Commands</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Vagrant - Commands</a>
+        
+            <ul>
+            
+            </ul>
         
     </li>
 
@@ -268,8 +268,12 @@
     <li><a href="../..">Docs</a> &raquo;</li>
     
       
+        
+          <li>Vagrant &raquo;</li>
+        
+      
     
-    <li>Grunt</li>
+    <li>Vagrant - Commands</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -279,7 +283,59 @@
           <div role="main">
             <div class="section">
               
-                
+                <p>[[imagem:vagrant.png|right|400px]]</p>
+<p>Vagrant é uma ferramenta para a construção de ambientes de desenvolvimento completos. Ele funciona integrado ao Virtualbox e pode ajudar na criação e gerenciamento de máquinas virtuais via linha de comandos. Com um fluxo de trabalho fácil de usar e foco em automação, o Vagrant busca reduzir o tempo de instalação de um ambiente de desenvolvimento, aumentando a produtividade e fazendo com que as velhas "instalações locais" sejam coisas do passado. </p>
+<p>O projeto Vagrant foi iniciado em janeiro de 2010 por Mitchell Hashimoto. Por quase três anos, Vagrant era um projeto paralelo para Mitchell, um projeto que ele trabalhou nas horas vagas como um hobby. Durante este tempo, Vagrant cresceu e hoje é um software confiável, 100% open source (já disponível inclusive em repositórios Debian), utilizado desde desenvolvedores free-lance até equipes de grandes empresas.</p>
+<p>Em novembro de 2012, uma empresa chamada HashiCorp foi formado por Mitchell para desenvolver Vagrant em tempo integral. Essa empresa oferece adições comerciais, formação e suporte profissional para o Vagrant.</p>
+<p>== Tutoriais ==
+<em> Vídeos
+:</em> Vagrant - Entendimentos básicos https://www.youtube.com/watch?v=uhYdTS0g7SU</p>
+<ul>
+<li>Texto
+:* [[vagrant - Comandos básicos]]</li>
+</ul>
+<p>== Plugins ==
+* https://github.com/vagrant-landrush/landrush</p>
+<p>== Instalando uma nova máquina virtual ==</p>
+<p>$ vagrant box add '''hashicorp/precise32'''</p>
+<p>Para customizar o tipo de "box" (máquina virtual a ser instalada), você pode fazer uma busca por boxes disponíveis na rede. Veja algumas máquina disponíveis: https://atlas.hashicorp.com/boxes/search</p>
+<p>Você também pode indicar uma url para a operação:</p>
+<p>$ vagrant box add https://atlas.hashicorp.com/chef/boxes/ubuntu-14.04.box</p>
+<p>Iniciando uma máquina Ubuntu 14.04</p>
+<p>$ vagrant init ubuntu/trusty64; vagrant up</p>
+<p>Ex: https://atlas.hashicorp.com/ubuntu/boxes/trusty64</p>
+<p>== Gerenciando boxes ==
+* https://docs.vagrantup.com/v2/cli/box.html</p>
+<p>== Gerando arquivo Vagrantfile ==</p>
+<p>Para o vagrant rodar, a aplicação precisa de um arquivo Vagrantfile em determinado diretório. Recomenda-se a criação de um diretório na pasta /home e dentro dessa pasta a insersão do arquivo. Você pode gerar o arquivo com o comando: </p>
+<p>$ vagrant init</p>
+<p>Depois desse processo é necessário customizar o arquivo para que ele possa ouvir a box correta. Você deve abrí-lo e mudar o nome indicado em negrito para o nome de sua box: </p>
+<p>Vagrant.configure("2") do |config|
+    config.vm.box = "'''hashicorp/precise32'''"
+  end</p>
+<p>== Ativando uma máquina virtual ==</p>
+<p>Depois de baixar um box e customizar o arquivo vagrantfile, você precisa ativar sua máquina virtual. </p>
+<p>$ vagrant up</p>
+<p>== Acessando a máquina virtual vagrant ==
+  $ vagrant ssh</p>
+<p>== Configurando rede ==
+Você pode fazer o vagrant responder localmente na máquina de origem redirecionando portas. Veja um exemplo de comandos a serem adicionados no vagrantfile para redirecionar a saída de uma aplicação web do vagrant para a porta 4567 no host de origem:</p>
+<p># Every Vagrant virtual environment requires a box to build off of.
+  config.vm.box = "chef/ubuntu-14.04"
+  config.vm.network :forwarded_port, guest: 80, host: 4567</p>
+<p>== Compartilhando pastas entre máquina hospedeira e máquina virtual ==
+No Vagrantfile, esteja atento para a seguinte directiva: </p>
+<p># argument is a set of non-required options.
+  config.vm.synced_folder "/maquina/hospedeira", "/maquina/virtual/vagrant",
+  owner: "nome-do-usuario-dono-dos-arquivos-na-maquina-virtual", group: "nome-do-grupo-dos-arquivos-na-maquina-virtual"</p>
+<p>Ver mais em https://docs.vagrantup.com/v2/synced-folders/basic_usage.html</p>
+<p>== Apagando uma máquina virtual ==
+  $ vagrant destroy</p>
+<p>== Referencias ==</p>
+<ul>
+<li>https://www.vagrantup.com</li>
+<li>Código do Vagrant: https://github.com/mitchellh/vagrant</li>
+</ul>
               
             </div>
           </div>
@@ -287,10 +343,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../gulp/readme/" class="btn btn-neutral float-right" title="Gulp">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../wordpress/readme/" class="btn btn-neutral float-right" title="Wordpress">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../git/readme/" class="btn btn-neutral" title="Git"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../tar/tar_commands/" class="btn btn-neutral" title="Tar - Commands"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -316,10 +372,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../git/readme/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../tar/tar_commands/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../gulp/readme/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../wordpress/readme/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

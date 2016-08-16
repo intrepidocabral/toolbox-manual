@@ -13,37 +13,47 @@
         {
             "location": "/bower/readme/", 
             "text": "", 
-            "title": "bower"
+            "title": "Bower"
         }, 
         {
             "location": "/docker/readme/", 
             "text": "", 
-            "title": "docker"
+            "title": "Docker"
         }, 
         {
             "location": "/git/readme/", 
             "text": "", 
-            "title": "git"
+            "title": "Git"
         }, 
         {
             "location": "/grunt/readme/", 
             "text": "", 
-            "title": "grunt"
+            "title": "Grunt"
         }, 
         {
             "location": "/gulp/readme/", 
             "text": "", 
-            "title": "gulp"
+            "title": "Gulp"
         }, 
         {
             "location": "/laravel/readme/", 
             "text": "", 
-            "title": "laravel"
+            "title": "Laravel"
         }, 
         {
-            "location": "/mysql/readme/", 
+            "location": "/mysql/mysql_commands/", 
+            "text": "== ComandLine ==\nNota: depois dos comandos, n\u00e3o esque\u00e7a de colocar ; (ponto e v\u00edrgula) para fazer efeito. \n\n\n=== Entrando e saindo do Mysql ===\n # mysql -u nome_do_usuario -p \n\n\nO prompt vai ficar assim: \n\n\n# mysql\n\n\npara sair basta usar o exit: \n\n\n# mysql\n exit + enter\n\n\n=== Criando novo usu\u00e1rio ===\n\n\nCom usu\u00e1rio root:\n\n\n# mysql\n CREATE USER 'nome-do-usuario'@'localhost' IDENTIFIED BY 'senha-senha-senha';\n\n\n=== Criando uma base de dados ===\n\n\n# mysql\n create database nome_da_base;\n\n\n=== Selecionar banco ===\n\n\n# mysql\n USE nome_do_banco;\n\n\n=== Mostrar tabelas ===\n\n\n# mysql\n show tables;\n\n\n=== Criando tabela ===\n\n\n# mysql\n create TABLE endereco (\n id_endereco smallint NOT NULL,\n rua varchar(100) NOT NULL,\n bairro varchar(25) NOT NULL,\n cidade varchar(25),\n primary key(id_endereco)\n );\n\n\n=== Visualizar colunas da tabela ===\n\n\n# mysql\n DESC endereco;\n\n\n=== Inserindo coluna na tabela ===\n\n\n# mysql\n ALTER TABLE endereco ADD pais varchar(25);\n\n\n=== Remover chave prim\u00e1ria da tabela ===\n\n\nmysql\n ALTER TABLE endereco DROP primary key; Inserindo chave prim\u00e1ria na tabela:\n\n\nmysql\n ALTER TABLE endereco ADD PRIMARY KEY(id_endereco);\n\n\n=== Modificar defini\u00e7\u00f5es de uma coluna ===\n\n\n# mysql\n ALTER TABLE endereco MODIFY bairro varchar(50);\n\n\n=== Excluir coluna da tabela ===\n\n\n# mysql\n ALTER TABLE endereco DROP cidade;\n\n\n=== Renomear tabela ===\n\n\n# mysql\n ALTER TABLE endereco RENAME localizacao;\n\n\n=== Deletar uma tabela ===\n\n\n# mysql\n DROP TABLE localizacao;\n\n\n=== Deletar uma base de dados ===\n\n\n# mysql\n DROP DATABASE nome_da_base;\n\n\n=== Backup de base de dados ===\n\n\n# mysqldump -u usuario_da_base -p nome_da_base \n nome_da_base.sql\n\n\nRestaura\u00e7\u00e3o da base: \n\n\n# mysql -u root -p [database_name] \n dumpfilename.sql\n\n\n[[Categoria:Mysql]]\n[[Categoria:Linux]]", 
+            "title": "Mysql - Commands"
+        }, 
+        {
+            "location": "/mysql/mysql_commands/#mysql-alter-table-endereco-drop-primary-key-inserindo-chave-primaria-na-tabela", 
             "text": "", 
-            "title": "mysql"
+            "title": "mysql&gt; ALTER TABLE endereco DROP primary key; Inserindo chave prim\u00e1ria na tabela:"
+        }, 
+        {
+            "location": "/mysql/mysql_commands/#mysql-alter-table-endereco-add-primary-keyid_endereco", 
+            "text": "=== Modificar defini\u00e7\u00f5es de uma coluna ===  # mysql  ALTER TABLE endereco MODIFY bairro varchar(50);  === Excluir coluna da tabela ===  # mysql  ALTER TABLE endereco DROP cidade;  === Renomear tabela ===  # mysql  ALTER TABLE endereco RENAME localizacao;  === Deletar uma tabela ===  # mysql  DROP TABLE localizacao;  === Deletar uma base de dados ===  # mysql  DROP DATABASE nome_da_base;  === Backup de base de dados ===  # mysqldump -u usuario_da_base -p nome_da_base   nome_da_base.sql  Restaura\u00e7\u00e3o da base:   # mysql -u root -p [database_name]   dumpfilename.sql  [[Categoria:Mysql]]\n[[Categoria:Linux]]", 
+            "title": "mysql&gt; ALTER TABLE endereco ADD PRIMARY KEY(id_endereco);"
         }, 
         {
             "location": "/postgres/postgres_commands/", 
@@ -133,17 +143,47 @@
         {
             "location": "/rails/readme/", 
             "text": "", 
-            "title": "rails"
+            "title": "Rails"
         }, 
         {
-            "location": "/shell-script/readme/", 
+            "location": "/shell_script/shell_script_commands/", 
+            "text": "Este artigo traz uma lista de comandos b\u00e1sicos usados para controlar alguns dos programas essenciais dos sistemas GNU/Linux. Aprenda-os e voc\u00ea conseguir\u00e1 usar seu sistema de modo muito mais f\u00e1cil, \u00fatil e r\u00e1pido, resolvendo problemas ou criando solu\u00e7\u00f5es para facilitar seu trabalho. \n\n\nTodo comando \u00e9 necessariamente uma ordem a um programa que comp\u00f5e o sistema e todo comando, desde o mais simples ao mais complexo, nos sistemas GNU/Linux atua dizendo o que um determinado programa deve ou n\u00e3o deve fazer, da\u00ed o nome comando. \n\n\nVamos usar como exemplo o interpretador de comandos Bash. O bash \u00e9 um interpretador de comandos, uma esp\u00e9cie de tradutor entre o sistema operacional e o usu\u00e1rio, normalmente conhecido como shell. Permite a execu\u00e7\u00e3o de seq\u00fc\u00eancias de comandos direto no prompt do sistema ou escritas em arquivos de texto, conhecidos como shell scripts. O comando mais util do bash para acompanhar os demais comandos abaixo e' o history, que mostra a historia de comandos digitados. \n\n\nO sistema usado como modelo \u00e9 o Debian Lenny com interface gr\u00e1fica gnome. Para usar o interpretador de comandos em um sistema com interface gr\u00e1fica, voc\u00ea poder\u00e1 proceder de tr\u00eas maneiras. Escolha a forma: \nTecle alt + F2 e digite gnome-terminal. Um prompt de comandos ir\u00e1 se abrir;\nMenu do sistemas v\u00e1 para \u201caplica\u00e7\u00f5es\u201d \n \u201cacess\u00f3rios\u201d \n \u201cterminal\u201d;\nTecle ctrl + alt + F1(ou F2, F3...at\u00e9 F6. Para voltar ao modo gr\u00e1fico tecle F7).\n\n\n\u00c9 importante lembrar que boa parte dos comandos aqui descritos s\u00f3 podem ser executados com permiss\u00e3o de root.\n\n\nComandos para Shell Script\n\n\nUsu\u00e1rios e Grupos\n\n\nadduser\n\n\nAdiciona um usu\u00e1rio novo no sistema\n\n\nusuario-sistema@debian:/$ adduser jose\nAdding user 'jose' ...\nAdding new group `jose' (1004) ...\nAdding new user `jose' (1003) with group 'jose' ...\nCreating home directory `/home/jose' ...\nCopying files from `/etc/skel' ...\nDigite a nova senha UNIX: *****\nRedigite a nova senha UNIX: ******\npasswd: senha atualizada com sucesso\nModificando as informa\u00e7\u00f5es de usu\u00e1rio para jose\nInforme o novo valor ou pressione ENTER para aceitar o padr\u00e3o\n       Nome Completo []: Jos\u00e9 Silva\n       N\u00famero da Sala []:\n       Fone de Trabalho []:\n       Fone Dom\u00e9stico []:\n       Outro []:\nIs the information correct? [Y/n] y\n\n\n\n\ndeluser\n\n\naddgroups\n\n\nAdiciona um grupo novo no sistema\n\n\nroot@debian-servidor:/# addgroup teste\nAdding group `teste' (GID 1003) ...\nConclu\u00eddo.\nroot@debian-servidor:/#\n\n\n\n\ncat\n\n\nLe o conte\u00fado de um arquivo e exibe na tela\n\n\n```root@debian-servidor:/# cat /etc/apt/sources.list\ndeb http:// security.debian.org/ lenny/updates contrib main\ndeb-src http:// security.debian.org/ lenny/updates contrib main\ndeb http:// ftp.br.debian.org/debian lenny main contrib non-free\ndeb-src http:// ftp.br.debian.org/debian lenny main contrib non-free\ndeb-src http:// ftp.br.debian.org/debian-multimedia/ stable main\ndeb http:// ftp.br.debian.org/debian-multimedia/ stable main\nroot@debian-servidor:/#\n\n\n#### cd\n\n#### chfn\n\n#### chmod \n\n#### clear\n\n#### cp\n\n#### date\n\n\n#### df \n#### dmesg  \n#### dnsdomainname  \n#### du \n#### echo   \n#### find   \n#### finger \n#### free\n\ngrep\ngroupdel    \ngroups  \nhalt    \nhead    \nhostname    \nid  \nifconfig    \nifdown  \nifup    \njobs    \nkill    \nkillall \nkillall5    \nless    \nln  \nlocate  \nlogname \nls  \nlsmod   \n\n#### Como tornar um arqui .sh execut\u00e1vel:\n\n\n\n\ncd /caminho/arquivo\nchmod +x arquivo.sh\n./arquivo.sh\n```", 
+            "title": "Shell Script - Commands"
+        }, 
+        {
+            "location": "/shell_script/shell_script_commands/#comandos-para-shell-script", 
             "text": "", 
-            "title": "shell-script"
+            "title": "Comandos para Shell Script"
+        }, 
+        {
+            "location": "/shell_script/shell_script_commands/#usuarios-e-grupos", 
+            "text": "", 
+            "title": "Usu\u00e1rios e Grupos"
+        }, 
+        {
+            "location": "/shell_script/shell_script_commands/#adduser", 
+            "text": "Adiciona um usu\u00e1rio novo no sistema  usuario-sistema@debian:/$ adduser jose\nAdding user 'jose' ...\nAdding new group `jose' (1004) ...\nAdding new user `jose' (1003) with group 'jose' ...\nCreating home directory `/home/jose' ...\nCopying files from `/etc/skel' ...\nDigite a nova senha UNIX: *****\nRedigite a nova senha UNIX: ******\npasswd: senha atualizada com sucesso\nModificando as informa\u00e7\u00f5es de usu\u00e1rio para jose\nInforme o novo valor ou pressione ENTER para aceitar o padr\u00e3o\n       Nome Completo []: Jos\u00e9 Silva\n       N\u00famero da Sala []:\n       Fone de Trabalho []:\n       Fone Dom\u00e9stico []:\n       Outro []:\nIs the information correct? [Y/n] y", 
+            "title": "adduser"
+        }, 
+        {
+            "location": "/shell_script/shell_script_commands/#deluser", 
+            "text": "", 
+            "title": "deluser"
+        }, 
+        {
+            "location": "/shell_script/shell_script_commands/#addgroups", 
+            "text": "Adiciona um grupo novo no sistema  root@debian-servidor:/# addgroup teste\nAdding group `teste' (GID 1003) ...\nConclu\u00eddo.\nroot@debian-servidor:/#", 
+            "title": "addgroups"
+        }, 
+        {
+            "location": "/shell_script/shell_script_commands/#cat", 
+            "text": "Le o conte\u00fado de um arquivo e exibe na tela  ```root@debian-servidor:/# cat /etc/apt/sources.list\ndeb http:// security.debian.org/ lenny/updates contrib main\ndeb-src http:// security.debian.org/ lenny/updates contrib main\ndeb http:// ftp.br.debian.org/debian lenny main contrib non-free\ndeb-src http:// ftp.br.debian.org/debian lenny main contrib non-free\ndeb-src http:// ftp.br.debian.org/debian-multimedia/ stable main\ndeb http:// ftp.br.debian.org/debian-multimedia/ stable main\nroot@debian-servidor:/#  #### cd\n\n#### chfn\n\n#### chmod \n\n#### clear\n\n#### cp\n\n#### date\n\n\n#### df \n#### dmesg  \n#### dnsdomainname  \n#### du \n#### echo   \n#### find   \n#### finger \n#### free\n\ngrep\ngroupdel    \ngroups  \nhalt    \nhead    \nhostname    \nid  \nifconfig    \nifdown  \nifup    \njobs    \nkill    \nkillall \nkillall5    \nless    \nln  \nlocate  \nlogname \nls  \nlsmod   \n\n#### Como tornar um arqui .sh execut\u00e1vel:  cd /caminho/arquivo\nchmod +x arquivo.sh\n./arquivo.sh\n```", 
+            "title": "cat"
         }, 
         {
             "location": "/slim/readme/", 
             "text": "", 
-            "title": "slim"
+            "title": "Slim"
         }, 
         {
             "location": "/ssh/ssh_commands/", 
@@ -151,14 +191,29 @@
             "title": "SSH - Commands"
         }, 
         {
-            "location": "/sublime/readme/", 
-            "text": "", 
-            "title": "sublime"
+            "location": "/sublime/sublime_commands/", 
+            "text": "Instala\u00e7\u00e3o\n\n\nPara instalar, basta baixar o pacote do site e instalar com dpkg - https://www.sublimetext.com\n\n\nCustomizar atalhos\n\n\n\n\nV\u00e1 em \"preferences\" \n \"Key Binding default\" (para ver todos os atalhos padr\u00e3o do sistema) \n \"key bindings user\";\n\n\nBusque o atalho que quer mudar no \"default\" e copie para o \"user\"\n\n\n\n\nSelecionar multiplas linhas\n\n\n1 - Selecione as linhas que quer\n2 - Use CTRL + Shift + l \n\n\n== Refer\u00eancias ==\n\n\n\n\nCriando ambiente de desenvolvimento em php http://wasil.org/sublime-text-3-perfect-php-development-set-up\n\n\nLista de atalhos do Sublime http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_win.html", 
+            "title": "Sublime - Commands"
+        }, 
+        {
+            "location": "/sublime/sublime_commands/#instalacao", 
+            "text": "Para instalar, basta baixar o pacote do site e instalar com dpkg - https://www.sublimetext.com", 
+            "title": "Instala\u00e7\u00e3o"
+        }, 
+        {
+            "location": "/sublime/sublime_commands/#customizar-atalhos", 
+            "text": "V\u00e1 em \"preferences\"   \"Key Binding default\" (para ver todos os atalhos padr\u00e3o do sistema)   \"key bindings user\";  Busque o atalho que quer mudar no \"default\" e copie para o \"user\"", 
+            "title": "Customizar atalhos"
+        }, 
+        {
+            "location": "/sublime/sublime_commands/#selecionar-multiplas-linhas", 
+            "text": "1 - Selecione as linhas que quer\n2 - Use CTRL + Shift + l   == Refer\u00eancias ==   Criando ambiente de desenvolvimento em php http://wasil.org/sublime-text-3-perfect-php-development-set-up  Lista de atalhos do Sublime http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_win.html", 
+            "title": "Selecionar multiplas linhas"
         }, 
         {
             "location": "/supervisor/readme/", 
             "text": "", 
-            "title": "supervisor"
+            "title": "Supervisor"
         }, 
         {
             "location": "/tar/tar_commands/", 
@@ -166,14 +221,14 @@
             "title": "Tar - Commands"
         }, 
         {
-            "location": "/vagrant/readme/", 
-            "text": "", 
-            "title": "vagrant"
+            "location": "/vagrant/vagrant_commands/", 
+            "text": "[[imagem:vagrant.png|right|400px]]\n\n\nVagrant \u00e9 uma ferramenta para a constru\u00e7\u00e3o de ambientes de desenvolvimento completos. Ele funciona integrado ao Virtualbox e pode ajudar na cria\u00e7\u00e3o e gerenciamento de m\u00e1quinas virtuais via linha de comandos. Com um fluxo de trabalho f\u00e1cil de usar e foco em automa\u00e7\u00e3o, o Vagrant busca reduzir o tempo de instala\u00e7\u00e3o de um ambiente de desenvolvimento, aumentando a produtividade e fazendo com que as velhas \"instala\u00e7\u00f5es locais\" sejam coisas do passado. \n\n\nO projeto Vagrant foi iniciado em janeiro de 2010 por Mitchell Hashimoto. Por quase tr\u00eas anos, Vagrant era um projeto paralelo para Mitchell, um projeto que ele trabalhou nas horas vagas como um hobby. Durante este tempo, Vagrant cresceu e hoje \u00e9 um software confi\u00e1vel, 100% open source (j\u00e1 dispon\u00edvel inclusive em reposit\u00f3rios Debian), utilizado desde desenvolvedores free-lance at\u00e9 equipes de grandes empresas.\n\n\nEm novembro de 2012, uma empresa chamada HashiCorp foi formado por Mitchell para desenvolver Vagrant em tempo integral. Essa empresa oferece adi\u00e7\u00f5es comerciais, forma\u00e7\u00e3o e suporte profissional para o Vagrant.\n\n\n== Tutoriais ==\n\n V\u00eddeos\n:\n Vagrant - Entendimentos b\u00e1sicos https://www.youtube.com/watch?v=uhYdTS0g7SU\n\n\n\n\nTexto\n:* [[vagrant - Comandos b\u00e1sicos]]\n\n\n\n\n== Plugins ==\n* https://github.com/vagrant-landrush/landrush\n\n\n== Instalando uma nova m\u00e1quina virtual ==\n\n\n$ vagrant box add '''hashicorp/precise32'''\n\n\nPara customizar o tipo de \"box\" (m\u00e1quina virtual a ser instalada), voc\u00ea pode fazer uma busca por boxes dispon\u00edveis na rede. Veja algumas m\u00e1quina dispon\u00edveis: https://atlas.hashicorp.com/boxes/search\n\n\nVoc\u00ea tamb\u00e9m pode indicar uma url para a opera\u00e7\u00e3o:\n\n\n$ vagrant box add https://atlas.hashicorp.com/chef/boxes/ubuntu-14.04.box\n\n\nIniciando uma m\u00e1quina Ubuntu 14.04\n\n\n$ vagrant init ubuntu/trusty64; vagrant up\n\n\nEx: https://atlas.hashicorp.com/ubuntu/boxes/trusty64\n\n\n== Gerenciando boxes ==\n* https://docs.vagrantup.com/v2/cli/box.html\n\n\n== Gerando arquivo Vagrantfile ==\n\n\nPara o vagrant rodar, a aplica\u00e7\u00e3o precisa de um arquivo Vagrantfile em determinado diret\u00f3rio. Recomenda-se a cria\u00e7\u00e3o de um diret\u00f3rio na pasta /home e dentro dessa pasta a insers\u00e3o do arquivo. Voc\u00ea pode gerar o arquivo com o comando: \n\n\n$ vagrant init\n\n\nDepois desse processo \u00e9 necess\u00e1rio customizar o arquivo para que ele possa ouvir a box correta. Voc\u00ea deve abr\u00ed-lo e mudar o nome indicado em negrito para o nome de sua box: \n\n\nVagrant.configure(\"2\") do |config|\n    config.vm.box = \"'''hashicorp/precise32'''\"\n  end\n\n\n== Ativando uma m\u00e1quina virtual ==\n\n\nDepois de baixar um box e customizar o arquivo vagrantfile, voc\u00ea precisa ativar sua m\u00e1quina virtual. \n\n\n$ vagrant up\n\n\n== Acessando a m\u00e1quina virtual vagrant ==\n  $ vagrant ssh\n\n\n== Configurando rede ==\nVoc\u00ea pode fazer o vagrant responder localmente na m\u00e1quina de origem redirecionando portas. Veja um exemplo de comandos a serem adicionados no vagrantfile para redirecionar a sa\u00edda de uma aplica\u00e7\u00e3o web do vagrant para a porta 4567 no host de origem:\n\n\n# Every Vagrant virtual environment requires a box to build off of.\n  config.vm.box = \"chef/ubuntu-14.04\"\n  config.vm.network :forwarded_port, guest: 80, host: 4567\n\n\n== Compartilhando pastas entre m\u00e1quina hospedeira e m\u00e1quina virtual ==\nNo Vagrantfile, esteja atento para a seguinte directiva: \n\n\n# argument is a set of non-required options.\n  config.vm.synced_folder \"/maquina/hospedeira\", \"/maquina/virtual/vagrant\",\n  owner: \"nome-do-usuario-dono-dos-arquivos-na-maquina-virtual\", group: \"nome-do-grupo-dos-arquivos-na-maquina-virtual\"\n\n\nVer mais em https://docs.vagrantup.com/v2/synced-folders/basic_usage.html\n\n\n== Apagando uma m\u00e1quina virtual ==\n  $ vagrant destroy\n\n\n== Referencias ==\n\n\n\n\nhttps://www.vagrantup.com\n\n\nC\u00f3digo do Vagrant: https://github.com/mitchellh/vagrant", 
+            "title": "Vagrant - Commands"
         }, 
         {
             "location": "/wordpress/readme/", 
             "text": "", 
-            "title": "wordpress"
+            "title": "Wordpress"
         }
     ]
 }

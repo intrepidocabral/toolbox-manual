@@ -58,11 +58,13 @@
     
 
     
+        
     <url>
-     <loc>None/mysql/readme/</loc>
+     <loc>None/mysql/mysql_commands/</loc>
      <lastmod>2016-08-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
     
 
     
@@ -90,11 +92,13 @@
     
 
     
+        
     <url>
-     <loc>None/shell-script/readme/</loc>
+     <loc>None/shell_script/shell_script_commands/</loc>
      <lastmod>2016-08-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
     
 
     
@@ -116,11 +120,13 @@
     
 
     
+        
     <url>
-     <loc>None/sublime/readme/</loc>
+     <loc>None/sublime/sublime_commands/</loc>
      <lastmod>2016-08-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
     
 
     
@@ -142,11 +148,13 @@
     
 
     
+        
     <url>
-     <loc>None/vagrant/readme/</loc>
+     <loc>None/vagrant/vagrant_commands/</loc>
      <lastmod>2016-08-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
     
 
     

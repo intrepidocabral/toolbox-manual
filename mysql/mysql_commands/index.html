@@ -8,7 +8,7 @@
   
   
   
-  <title>Grunt - Toobox Manual</title>
+  <title>Mysql - Commands - Toobox Manual</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Grunt";
-    var mkdocs_page_input_path = "grunt/readme.md";
-    var mkdocs_page_url = "/grunt/readme/";
+    var mkdocs_page_name = "Mysql - Commands";
+    var mkdocs_page_input_path = "mysql/mysql_commands.md";
+    var mkdocs_page_url = "/mysql/mysql_commands/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -83,12 +83,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Grunt</a>
-        
-            <ul>
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../../grunt/readme/">Grunt</a>
         
     </li>
 <li>
@@ -113,8 +109,18 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../../mysql/mysql_commands/">Mysql - Commands</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Mysql - Commands</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#mysql-alter-table-endereco-drop-primary-key-inserindo-chave-primaria-na-tabela">mysql&gt; ALTER TABLE endereco DROP primary key; Inserindo chave primária na tabela:</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#mysql-alter-table-endereco-add-primary-keyid_endereco">mysql&gt; ALTER TABLE endereco ADD PRIMARY KEY(id_endereco);</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -268,8 +274,12 @@
     <li><a href="../..">Docs</a> &raquo;</li>
     
       
+        
+          <li>Mysql &raquo;</li>
+        
+      
     
-    <li>Grunt</li>
+    <li>Mysql - Commands</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -279,7 +289,54 @@
           <div role="main">
             <div class="section">
               
-                
+                <p>== ComandLine ==
+Nota: depois dos comandos, não esqueça de colocar ; (ponto e vírgula) para fazer efeito. </p>
+<p>=== Entrando e saindo do Mysql ===
+ # mysql -u nome_do_usuario -p </p>
+<p>O prompt vai ficar assim: </p>
+<p># mysql&gt;</p>
+<p>para sair basta usar o exit: </p>
+<p># mysql&gt; exit + enter</p>
+<p>=== Criando novo usuário ===</p>
+<p>Com usuário root:</p>
+<p># mysql&gt; CREATE USER 'nome-do-usuario'@'localhost' IDENTIFIED BY 'senha-senha-senha';</p>
+<p>=== Criando uma base de dados ===</p>
+<p># mysql&gt; create database nome_da_base;</p>
+<p>=== Selecionar banco ===</p>
+<p># mysql&gt; USE nome_do_banco;</p>
+<p>=== Mostrar tabelas ===</p>
+<p># mysql&gt; show tables;</p>
+<p>=== Criando tabela ===</p>
+<p># mysql&gt; create TABLE endereco (
+ id_endereco smallint NOT NULL,
+ rua varchar(100) NOT NULL,
+ bairro varchar(25) NOT NULL,
+ cidade varchar(25),
+ primary key(id_endereco)
+ );</p>
+<p>=== Visualizar colunas da tabela ===</p>
+<p># mysql&gt; DESC endereco;</p>
+<p>=== Inserindo coluna na tabela ===</p>
+<p># mysql&gt; ALTER TABLE endereco ADD pais varchar(25);</p>
+<p>=== Remover chave primária da tabela ===</p>
+<h1 id="mysql-alter-table-endereco-drop-primary-key-inserindo-chave-primaria-na-tabela">mysql&gt; ALTER TABLE endereco DROP primary key; Inserindo chave primária na tabela:</h1>
+<h1 id="mysql-alter-table-endereco-add-primary-keyid_endereco">mysql&gt; ALTER TABLE endereco ADD PRIMARY KEY(id_endereco);</h1>
+<p>=== Modificar definições de uma coluna ===</p>
+<p># mysql&gt; ALTER TABLE endereco MODIFY bairro varchar(50);</p>
+<p>=== Excluir coluna da tabela ===</p>
+<p># mysql&gt; ALTER TABLE endereco DROP cidade;</p>
+<p>=== Renomear tabela ===</p>
+<p># mysql&gt; ALTER TABLE endereco RENAME localizacao;</p>
+<p>=== Deletar uma tabela ===</p>
+<p># mysql&gt; DROP TABLE localizacao;</p>
+<p>=== Deletar uma base de dados ===</p>
+<p># mysql&gt; DROP DATABASE nome_da_base;</p>
+<p>=== Backup de base de dados ===</p>
+<p># mysqldump -u usuario_da_base -p nome_da_base &gt; nome_da_base.sql</p>
+<p>Restauração da base: </p>
+<p># mysql -u root -p [database_name] &lt; dumpfilename.sql</p>
+<p>[[Categoria:Mysql]]
+[[Categoria:Linux]]</p>
               
             </div>
           </div>
@@ -287,10 +344,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../gulp/readme/" class="btn btn-neutral float-right" title="Gulp">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../postgres/postgres_commands/" class="btn btn-neutral float-right" title="Postgres - Commands">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../git/readme/" class="btn btn-neutral" title="Git"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../laravel/readme/" class="btn btn-neutral" title="Laravel"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -316,10 +373,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../git/readme/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../laravel/readme/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../gulp/readme/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../postgres/postgres_commands/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

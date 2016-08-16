@@ -8,7 +8,7 @@
   
   
   
-  <title>Grunt - Toobox Manual</title>
+  <title>Shell Script - Commands - Toobox Manual</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Grunt";
-    var mkdocs_page_input_path = "grunt/readme.md";
-    var mkdocs_page_url = "/grunt/readme/";
+    var mkdocs_page_name = "Shell Script - Commands";
+    var mkdocs_page_input_path = "shell_script/shell_script_commands.md";
+    var mkdocs_page_url = "/shell_script/shell_script_commands/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -83,12 +83,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Grunt</a>
-        
-            <ul>
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../../grunt/readme/">Grunt</a>
         
     </li>
 <li>
@@ -157,8 +153,21 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../../shell_script/shell_script_commands/">Shell Script - Commands</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Shell Script - Commands</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#comandos-para-shell-script">Comandos para Shell Script</a></li>
+                
+                    <li><a class="toctree-l4" href="#usuarios-e-grupos">Usuários e Grupos</a></li>
+                
+                    <li><a class="toctree-l4" href="#adduser">adduser</a></li>
+                
+                    <li><a class="toctree-l4" href="#addgroups">addgroups</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -268,8 +277,12 @@
     <li><a href="../..">Docs</a> &raquo;</li>
     
       
+        
+          <li>Shell Script &raquo;</li>
+        
+      
     
-    <li>Grunt</li>
+    <li>Shell Script - Commands</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -279,7 +292,106 @@
           <div role="main">
             <div class="section">
               
-                
+                <p>Este artigo traz uma lista de comandos básicos usados para controlar alguns dos programas essenciais dos sistemas GNU/Linux. Aprenda-os e você conseguirá usar seu sistema de modo muito mais fácil, útil e rápido, resolvendo problemas ou criando soluções para facilitar seu trabalho. </p>
+<p>Todo comando é necessariamente uma ordem a um programa que compõe o sistema e todo comando, desde o mais simples ao mais complexo, nos sistemas GNU/Linux atua dizendo o que um determinado programa deve ou não deve fazer, daí o nome comando. </p>
+<p>Vamos usar como exemplo o interpretador de comandos Bash. O bash é um interpretador de comandos, uma espécie de tradutor entre o sistema operacional e o usuário, normalmente conhecido como shell. Permite a execução de seqüências de comandos direto no prompt do sistema ou escritas em arquivos de texto, conhecidos como shell scripts. O comando mais util do bash para acompanhar os demais comandos abaixo e' o history, que mostra a historia de comandos digitados. </p>
+<p>O sistema usado como modelo é o Debian Lenny com interface gráfica gnome. Para usar o interpretador de comandos em um sistema com interface gráfica, você poderá proceder de três maneiras. Escolha a forma: 
+Tecle alt + F2 e digite gnome-terminal. Um prompt de comandos irá se abrir;
+Menu do sistemas vá para “aplicações” &gt; “acessórios” &gt; “terminal”;
+Tecle ctrl + alt + F1(ou F2, F3...até F6. Para voltar ao modo gráfico tecle F7).</p>
+<p>É importante lembrar que boa parte dos comandos aqui descritos só podem ser executados com permissão de root.</p>
+<h2 id="comandos-para-shell-script">Comandos para Shell Script</h2>
+<h3 id="usuarios-e-grupos">Usuários e Grupos</h3>
+<h3 id="adduser">adduser</h3>
+<p>Adiciona um usuário novo no sistema</p>
+<pre><code>usuario-sistema@debian:/$ adduser jose
+Adding user 'jose' ...
+Adding new group `jose' (1004) ...
+Adding new user `jose' (1003) with group 'jose' ...
+Creating home directory `/home/jose' ...
+Copying files from `/etc/skel' ...
+Digite a nova senha UNIX: *****
+Redigite a nova senha UNIX: ******
+passwd: senha atualizada com sucesso
+Modificando as informações de usuário para jose
+Informe o novo valor ou pressione ENTER para aceitar o padrão
+       Nome Completo []: José Silva
+       Número da Sala []:
+       Fone de Trabalho []:
+       Fone Doméstico []:
+       Outro []:
+Is the information correct? [Y/n] y
+</code></pre>
+
+<h4 id="deluser">deluser</h4>
+<h3 id="addgroups">addgroups</h3>
+<p>Adiciona um grupo novo no sistema</p>
+<pre><code>root@debian-servidor:/# addgroup teste
+Adding group `teste' (GID 1003) ...
+Concluído.
+root@debian-servidor:/#
+</code></pre>
+
+<h4 id="cat">cat</h4>
+<p>Le o conteúdo de um arquivo e exibe na tela</p>
+<p>```root@debian-servidor:/# cat /etc/apt/sources.list
+deb http:// security.debian.org/ lenny/updates contrib main
+deb-src http:// security.debian.org/ lenny/updates contrib main
+deb http:// ftp.br.debian.org/debian lenny main contrib non-free
+deb-src http:// ftp.br.debian.org/debian lenny main contrib non-free
+deb-src http:// ftp.br.debian.org/debian-multimedia/ stable main
+deb http:// ftp.br.debian.org/debian-multimedia/ stable main
+root@debian-servidor:/#</p>
+<pre><code>#### cd
+
+#### chfn
+
+#### chmod 
+
+#### clear
+
+#### cp
+
+#### date
+
+
+#### df 
+#### dmesg  
+#### dnsdomainname  
+#### du 
+#### echo   
+#### find   
+#### finger 
+#### free
+
+grep
+groupdel    
+groups  
+halt    
+head    
+hostname    
+id  
+ifconfig    
+ifdown  
+ifup    
+jobs    
+kill    
+killall 
+killall5    
+less    
+ln  
+locate  
+logname 
+ls  
+lsmod   
+
+#### Como tornar um arqui .sh executável:
+</code></pre>
+
+<p>cd /caminho/arquivo
+chmod +x arquivo.sh
+./arquivo.sh
+```</p>
               
             </div>
           </div>
@@ -287,10 +399,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../gulp/readme/" class="btn btn-neutral float-right" title="Gulp">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../slim/readme/" class="btn btn-neutral float-right" title="Slim">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../git/readme/" class="btn btn-neutral" title="Git"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../rails/readme/" class="btn btn-neutral" title="Rails"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -316,10 +428,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../git/readme/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../rails/readme/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../gulp/readme/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../slim/readme/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
