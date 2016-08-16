@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>None/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/bower/readme/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/docker/readme/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/git/readme/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/grunt/readme/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/gulp/readme/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/laravel/readme/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/mysql/readme/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>None/postgres/postgres_commands/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/postgres/postgres_autodocs/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>None/rails/readme/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/shell-script/readme/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/slim/readme/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>None/ssh/ssh_commands/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>None/sublime/readme/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/supervisor/readme/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>None/tar/tar_commands/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>None/vagrant/readme/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/wordpress/readme/</loc>
+     <lastmod>2016-08-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+</urlset>
