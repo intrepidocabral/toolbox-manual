@@ -1,25 +1,29 @@
 site_name: Toobox Manual
 pages: 
 - Home: index.md
-- bower: bower/readme.md
-- docker: docker/readme.md
-- git: git/readme.md
-- grunt: grunt/readme.md
-- gulp: gulp/readme.md
-- laravel: laravel/readme.md
-- mysql: mysql/readme.md
+- Bower: bower/readme.md
+- Docker: docker/readme.md
+- Git: git/readme.md
+- Grunt: grunt/readme.md
+- Gulp: gulp/readme.md
+- Laravel: laravel/readme.md
+- Mysql:
+  - 'Mysql - Commands': 'mysql/mysql_commands.md'
 - Postgres: 
   - 'Postgres - Commands': 'postgres/postgres_commands.md'
   - 'Postgres - autodocs': 'postgres/postgres_autodocs.md'  
-- rails: rails/readme.md
-- shell-script: shell-script/readme.md
-- slim: slim/readme.md
-- ssh: 
+- Rails: rails/readme.md
+- Shell Script: 
+  - 'Shell Script - Commands': 'shell_script/shell_script_commands.md'
+- Slim: slim/readme.md
+- SSH: 
   - 'SSH - Commands': 'ssh/ssh_commands.md'
-- sublime: sublime/readme.md
-- supervisor: supervisor/readme.md
+- Sublime:
+  - 'Sublime - Commands': 'sublime/sublime_commands.md'
+- Supervisor: supervisor/readme.md
 - TAR: 
   - 'Tar - Commands': 'tar/tar_commands.md'
-- vagrant: vagrant/readme.md
-- wordpress: wordpress/readme.md
+- Vagrant: 
+  - 'Vagrant - Commands': 'vagrant/vagrant_commands.md'
+- Wordpress: wordpress/readme.md
 theme: readthedocs
