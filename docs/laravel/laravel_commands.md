@@ -16,3 +16,8 @@ php artisan app:name <nome da aplicacao>
 ```
 php artisan --version
 ```
+
+## Gera chave para cifrar dados da aplicação
+```
+php artisan key:generate
+```
