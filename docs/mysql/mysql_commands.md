@@ -1,16 +1,19 @@
-== ComandLine ==
 Nota: depois dos comandos, não esqueça de colocar ; (ponto e vírgula) para fazer efeito. 
 
-=== Entrando e saindo do Mysql ===
+## Entrando e saindo do Mysql
+```
  # mysql -u nome_do_usuario -p 
+```
 
 O prompt vai ficar assim: 
-
+```
  # mysql>
+```
 
 para sair basta usar o exit: 
-
+```
  # mysql> exit + enter
+```
 
 === Criando novo usuário ===
 
