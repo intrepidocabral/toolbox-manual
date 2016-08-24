@@ -113,3 +113,7 @@ cd /caminho/arquivo
 chmod +x arquivo.sh
 ./arquivo.sh
 ```
+
+## Referências
+
+* https://tmuxcheatsheet.com/
