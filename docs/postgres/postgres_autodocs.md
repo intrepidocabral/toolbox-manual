@@ -31,7 +31,7 @@ Para gerar o modelo .dot:
 Para gerar o modelo em png: 
 
 ```
-  $ dot -Tpng '''nome-da-databasename.dot''' -o '''nome-do-modelo.png'''
+  $ dot -Tpng nome-da-databasename.dot -o nome-do-modelo.png
 ```
 
 ## Referências 
