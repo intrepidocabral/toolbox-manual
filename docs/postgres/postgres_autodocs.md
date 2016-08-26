@@ -25,7 +25,7 @@ Outras ferramentas interessantes para processamento conjunto (faça a instalaç�
 Para gerar o modelo .dot:
 
 ```
-  $ postgresql_autodoc -t dot -h '''nome-do-hostname''' -u '''nome-do-username''' -d '''nome-da-databasenam'''e --password
+  $ postgresql_autodoc -t dot -h nome-do-hostname -u nome-do-username -d nome-da-databasenam --password
 ```
 
 Para gerar o modelo em png: 
