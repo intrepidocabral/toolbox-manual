@@ -18,8 +18,9 @@ Para logar usando root e um usuário específico e uma base. Esse método irá e
 ```
 
 Para logar com um usuário específico:
-  $ psql -h <host> -p <port> -U <username> -W <password> <database>
-
+```
+$ psql -h <host> -p <port> -U <username> -W <password> <database>
+```
 
 #### Conecta numa base específica:
 
