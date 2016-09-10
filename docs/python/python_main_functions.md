@@ -33,3 +33,11 @@
 <type 'float'>
 >>>
 ```
+## Remover itens de uma lista: **remove()**
+
+```
+>>> numeros = [1,2,3]
+>>> numeros.remove(1)
+>>> numeros
+[2, 3]
+```
