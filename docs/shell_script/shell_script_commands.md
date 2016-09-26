@@ -56,7 +56,8 @@ root@debian-servidor:/#
 
 Le o conteúdo de um arquivo e exibe na tela
 
-```root@debian-servidor:/# cat /etc/apt/sources.list
+```
+root@debian-servidor:/# cat /etc/apt/sources.list
 deb http:// security.debian.org/ lenny/updates contrib main
 deb-src http:// security.debian.org/ lenny/updates contrib main
 deb http:// ftp.br.debian.org/debian lenny main contrib non-free
