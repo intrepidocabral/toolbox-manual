@@ -38,6 +38,7 @@ Informe o novo valor ou pressione ENTER para aceitar o padrão
        Outro []:
 Is the information correct? [Y/n] y
 ```
+
 #### deluser
 
 ### addgroups
@@ -64,6 +65,7 @@ deb-src http:// ftp.br.debian.org/debian-multimedia/ stable main
 deb http:// ftp.br.debian.org/debian-multimedia/ stable main
 root@debian-servidor:/#
 ```
+
 #### cd
 
 #### chfn
@@ -89,20 +91,25 @@ root@debian-servidor:/#
 ## grep
 
 Buscando uma string dentro de um conjunto de arquivos: 
+
 ```
   grep -R [string buscada] [diretório base]
 ```
 
 Exemplos:
+
 ```
   grep -R  "Meu Texto" ./
 
   grep -R  "texto procurado" "/home/A Minha Pasta"
 ```
+
 O resultado da busca será cada ocorrência do texto em cada arquivo encontrado, o que poderá gerar um pouco de repeteco. Podemos melhorar isto com uma abordagem que achei em um fórum, que é o recorte da saída de cada ocorrência, a fim de captar somente o nome do arquivo onde o texto está, e então fazer um agrupamento. Segue o comando:
+
 ```
   grep -R  "Meu Texto" /home/blablabla/ | cut -d: -f1 | uniq
 ```
+
 * Neste caso, o “cut” será do início do texto até o sinal de “:” (definido por “-d:“) e a primeira parte do texto (definida por -f1) será agrupada por uniq.
 
 Referência: 
@@ -130,6 +137,7 @@ ls
 lsmod	
 
 #### Como tornar um arqui .sh executável:
+
 ```
 cd /caminho/arquivo
 chmod +x arquivo.sh
