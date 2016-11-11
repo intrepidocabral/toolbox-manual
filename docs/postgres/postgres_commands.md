@@ -151,7 +151,7 @@ Create an account where the user can create databases:
 Para fazer dump de uma base inteira para um arquivo .sql vc pode usar o comando:
 
 ```
-  pg_dump dbname > outfile
+pg_dump database_name -O -x > output_file
 ```
 
 Para recuperar o dump, user este comando: 
