@@ -5,10 +5,10 @@ Além das propriedades de segurança, o rsync utiliza o protocolo remote-update,
 Voltando ao nosso estudo de caso introdutório, se alteramos uma dúzia de arquivos numa porção de centenas, ao executar um rsync do seu desktop para o servidor, somente os arquivos alterados serão enviados por upload e você ainda não corre o risco de algum espertinho utilizando um sniffer1 na rede capturar sua senha de FTP em plain text. 
 
 Resumindo, existem pelo menos quatro situações onde o rsync pode te ajudar:
-# copiando (ou sincronizando) arquivos entre dois diretórios locais;
-# copiando (ou sincronizando) arquivos de sua máquina local para um servidor remoto;
-# copiando (ou sincronizando) arquivos de um servidor remoto para sua máquina local;
-# listando os arquivos de um diretório no servidor remoto (como um "remote ls").
+- copiando (ou sincronizando) arquivos entre dois diretórios locais;
+- copiando (ou sincronizando) arquivos de sua máquina local para um servidor remoto;
+- copiando (ou sincronizando) arquivos de um servidor remoto para sua máquina local;
+- listando os arquivos de um diretório no servidor remoto (como um "remote ls").
 
 === Situação Problema ===
 Vamos imaginar um cenário onde você programou um mega portal que possui centenas de arquivos que somados ocupam cerca de 300 MB em disco rígido. Existem duas cópias do portal, uma no seu desktop de trabalho e outra no servidor Linux em produção. 
@@ -23,20 +23,22 @@ O grande problema é que você passou horas programando e já não recorda quais
 Rsync é quase que um pacote default em todas as distribuições linux. Aquelas que não o instalam numa instalação do tipo básica, com certeza possuem o pacote em algum lugar em seus CDs de instalação. Consulte os mesmos para maiores informações. 
 
 No Debian, a instalação do mesmo se faz com apenas um comando: 
-
+```
   # apt-get install rsync 
+```
 
 Se você preferir, pode obter o software direto na fonte. Seu site oficial é:
 * http://rsync.samba.org
 
 E seu download pode ser obtido em:
 
-* ftp://rsync.samba.org/pub/rsync
+- ftp://rsync.samba.org/pub/rsync
 
 
 Para a comunicação entre duas máquinas com rsync funcionar, será necessário:
-# o programa rsync instalado em ambas as máquinas;
-# o servidor SSH (sshd) rodando no servidor.
+
+- o programa rsync instalado em ambas as máquinas;
+- o servidor SSH (sshd) rodando no servidor.
 
 '''Nota:''' se a comunicação for bilateral (ambas as máquinas enviam e recebem arquivos) o serviço SSH precisará estar rodando em ambas as máquinas.
 
