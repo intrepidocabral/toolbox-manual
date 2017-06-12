@@ -13,7 +13,7 @@ Em novembro de 2012, uma empresa chamada HashiCorp foi formado por Mitchell para
 * https://github.com/vagrant-landrush/landrush
 
 
-## Instalando uma nova máquina virtual ==
+## Instalando uma nova máquina virtual 
 
 ```
   $ vagrant box add '''hashicorp/precise32'''
