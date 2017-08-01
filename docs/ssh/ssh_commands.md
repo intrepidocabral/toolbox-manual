@@ -35,6 +35,15 @@ Lembrando que ssh_host_ecdsa_key.pub é a chave pública mais usada, mas existem
 
 Muitas vezes criamos chaves criptográficas assimétricas com o OpenSSL e com o OpenSSH. No momento da criação de tais chaves, são solicitadas senhas para as mesmas. A dúvida é a seguinte: como proceder para trocar tais senhas?
 
+## Mantendo a sessão aberta
+Adicione essas duas linhas dentro da parte Host * no arquivo ```/etc/ssh/ssh_config```
+
+```
+Host *
+   ServerAliveInterval 150
+  ServerAliveCountMax 2
+```
+
 ## Changing a Passphrase with ssh-keygen 
 
 The -p option requests changing the passphrase of a private key file instead of creating a new private key. The program will prompt for the file containing the private key, for the old passphrase, and twice for the new passphrase. Use -f {filename} option to specifies the filename of the key file. For example, change directory to $HOME/.ssh. Open the Terminal app and then type:
