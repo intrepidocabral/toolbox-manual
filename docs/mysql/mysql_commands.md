@@ -15,26 +15,35 @@ para sair basta usar o exit:
  # mysql> exit + enter
 ```
 
-=== Criando novo usuário ===
+## Criando novo usuário 
 
 Com usuário root:
 
- # mysql> CREATE USER 'nome-do-usuario'@'localhost' IDENTIFIED BY 'senha-senha-senha';
+```
+mysql> CREATE USER 'nome-do-usuario'@'localhost' IDENTIFIED BY 'senha-senha-senha';
+```
 
-=== Criando uma base de dados ===
+## Criando uma base de dados ===
 
- # mysql> create database nome_da_base;
+```
+mysql> create database nome_da_base;
+```
 
-=== Selecionar banco ===
+## Selecionar banco 
 
- # mysql> USE nome_do_banco;
+```
+mysql> USE nome_do_banco;
+```
 
-=== Mostrar tabelas ===
+## Mostrar tabelas 
 
- # mysql> show tables;
+```
+mysql> show tables;
+```
 
-=== Criando tabela ===
+## Criando tabela 
 
+```
  # mysql> create TABLE endereco (
  id_endereco smallint NOT NULL,
  rua varchar(100) NOT NULL,
@@ -42,49 +51,70 @@ Com usuário root:
  cidade varchar(25),
  primary key(id_endereco)
  );
+```
 
-=== Visualizar colunas da tabela ===
+## Visualizar colunas da tabela 
 
+```
  # mysql> DESC endereco;
+```
 
-=== Inserindo coluna na tabela ===
+## Inserindo coluna na tabela 
 
+```
  # mysql> ALTER TABLE endereco ADD pais varchar(25);
+```
 
-=== Remover chave primária da tabela ===
+## Remover chave primária da tabela 
 
-# mysql> ALTER TABLE endereco DROP primary key; Inserindo chave primária na tabela:
+```
+mysql> ALTER TABLE endereco DROP primary key; 
+```
 
-# mysql> ALTER TABLE endereco ADD PRIMARY KEY(id_endereco);
+## Inserindo chave primária na tabela:
 
-=== Modificar definições de uma coluna ===
+```
+mysql> ALTER TABLE endereco ADD PRIMARY KEY(id_endereco);
+```
 
- # mysql> ALTER TABLE endereco MODIFY bairro varchar(50);
+## Modificar definições de uma coluna 
 
-=== Excluir coluna da tabela ===
+```
+mysql> ALTER TABLE endereco MODIFY bairro varchar(50);
+```
 
- # mysql> ALTER TABLE endereco DROP cidade;
+## Excluir coluna da tabela 
 
-=== Renomear tabela ===
+```
+mysql> ALTER TABLE endereco DROP cidade;
+```
 
+## Renomear tabela
+
+```
  # mysql> ALTER TABLE endereco RENAME localizacao;
+```
 
-=== Deletar uma tabela ===
+## Deletar uma tabela 
 
+```
  # mysql> DROP TABLE localizacao;
+```
 
-=== Deletar uma base de dados ===
+## Deletar uma base de dados 
 
- # mysql> DROP DATABASE nome_da_base;
+```
+mysql> DROP DATABASE nome_da_base;
+```
 
-=== Backup de base de dados ===
+## Backup de base de dados ===
 
-  # mysqldump -u usuario_da_base -p nome_da_base > nome_da_base.sql
+```
+mysqldump -u usuario_da_base -p nome_da_base > nome_da_base.sql
+```
 
-Restauração da base: 
+## Restauração da base: 
 
+```
   # mysql -u root -p [database_name] < dumpfilename.sql
-
-[[Categoria:Mysql]]
-[[Categoria:Linux]]
-
+```
