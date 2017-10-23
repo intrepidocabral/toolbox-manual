@@ -23,7 +23,7 @@ Com usuário root:
 mysql> CREATE USER 'nome-do-usuario'@'localhost' IDENTIFIED BY 'senha-senha-senha';
 ```
 
-## Criando uma base de dados ===
+## Criando uma base de dados
 
 ```
 mysql> create database nome_da_base;
@@ -107,7 +107,7 @@ mysql> ALTER TABLE endereco DROP cidade;
 mysql> DROP DATABASE nome_da_base;
 ```
 
-## Backup de base de dados ===
+## Backup de base de dados 
 
 ```
 mysqldump -u usuario_da_base -p nome_da_base > nome_da_base.sql
