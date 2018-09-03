@@ -2,7 +2,7 @@
 
 Comandos rápidos para as principais ferramentas do desenvolvedor web. 
 
-Acesse a instância pública aqui: https://robertkapa.github.io/toolbox-manual
+Acesse a instância pública aqui:
 
 ## Referência
 Estamos usando mkdocs com tema material
