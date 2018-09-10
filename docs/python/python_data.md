@@ -64,8 +64,10 @@ Reverse the elements of the list, in place.
 ### Dicionário (dictionary)
 
 ```
-tel = {'jack': 4098, 'sape': 4139}
+tel = {'jack': 4098, 'sape': 4139}working tree clean
+
 ```
+#### Métodos de dicionário
 
 ## Referência
 
