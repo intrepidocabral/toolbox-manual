@@ -1,1 +1,0 @@
-# Caixa de ferramentas developer
