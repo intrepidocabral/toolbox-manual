@@ -32,7 +32,7 @@ Clicar e arrastar o arquivo theme e aguardar o download ser finalizado<br>
 ### Exportar e importar a base de dados
 Primeiramente devemos fazer login no servidor via terminal, mas como fazer isso?
 ```
-$ ssh user@host
+$ ssh user@hostREPLACE_2018_09_12_database_awc
 ```
 * Em caso de dúvida, as informações poderão estar presentes no KeePassX
 
@@ -48,13 +48,13 @@ define('DB_NAME', 'db_name');
 
 /** MySQL database username */
 
-define('DB_USER', 'wp_user');
+define('DB_USER', 'db_user');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'wp_password');
+define('DB_PASSWORD', 'db_password');
 
 /** MySQL hostname */
-define('DB_HOST', 'wp_host');
+define('DB_HOST', 'db_host');
 ```
 Agora que temos os dados do banco, vamos importar o arquivo .sql com os dados da aplicação:
 ```
@@ -63,6 +63,6 @@ $ mysqldump -h wp_host -u wp_user -p db_name > yyyy_MM_dd_database_nome.sql
 O arquivo .sql foi gerado, ou seja, o arquivo foi exportado.<br>
 Para importá-lo, dar o comando CTRL + D para sair do servidor, voltar para nossa máquina e selecionar a pasta destino para o arquivo .sql
 ```
-mysql -h meu_host -u meu_user -p minha_senha --default_character_set utf8 meu_banco < yyyy_MM_dd_database_nome.sql
+mysql -h meu_host -u meu_user -pminha_senha --default_character_set utf8 meu_banco < yyyy_MM_dd_database_nome.sql
 ```
 ### FINALIZADO
