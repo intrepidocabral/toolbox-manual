@@ -41,3 +41,9 @@
 >>> numeros
 [2, 3]
 ```
+
+## Funções anônimas: **lambda arguments : expression**
+```
+>>> map(lambda x : x * 2, [1, 2, 3, 4])
+Output [2, 4, 6, 8]
+```

@@ -1,4 +1,4 @@
-## Migraçao de página wordpress
+## Migração de página wordpress
 
 ### Importar Tema Wordpress
 Primeiramente instalamos o FileZilla na máquina para fazer o download da página wordpress na máquina virtual.
@@ -13,9 +13,9 @@ No KeePassX em ssh (servidor) encontramos o usuário do servidor e a senha
 
 * User: <b>user</b>
 * Senha: <b>****</b>
-* Porta: <b>22</b> (padrão ssh)
+* Porta: <b>22</b> (padrão)
 
-No menu inferior teremos 4 ambas, as da esquerda são o conjunto local e as da direita o conjunto do conteúdo remoto (no servidor).
+No menu inferior teremos 4 abas, as da esquerda são o conjunto local e as da direita o conjunto do conteúdo remoto (no servidor).
 
 Na aba <b>"Endereço remoto"</b> iremos navegar pelos arquivos dentro do servidor".<br>
 O que nos interessa no momento é o tema wordpress, para encontrá-lo seguiremos o seguinte caminho:
@@ -32,7 +32,7 @@ Clicar e arrastar o arquivo theme e aguardar o download ser finalizado<br>
 ### Exportar e importar a base de dados
 Primeiramente devemos fazer login no servidor via terminal, mas como fazer isso?
 ```
-$ ssh user@hostREPLACE_2018_09_12_database_awc
+$ ssh user@host
 ```
 * Em caso de dúvida, as informações poderão estar presentes no KeePassX
 
