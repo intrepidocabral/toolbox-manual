@@ -1,3 +1,8 @@
+## Listar todos os branchs
+```
+$ git branch -l
+```
+
 ## Criando um novo Branch
 
 ```
