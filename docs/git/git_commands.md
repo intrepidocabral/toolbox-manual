@@ -1,3 +1,8 @@
+## Verificar o status
+```
+$ git status
+```
+
 ## Listar todos os branchs
 ```
 $ git branch -l
@@ -8,6 +13,7 @@ $ git branch -l
 ```
 git checkout -b [name_of_your_new_branch]
 ```
+
 
 Ref:
 
